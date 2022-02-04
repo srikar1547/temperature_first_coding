@@ -13,3 +13,24 @@ def get_temperature(city):
 city = input("City:")
 temp=get_temperature(city)
 print(temp)
+
+
+# next code
+
+from urllib.request import urlopen
+
+def get_conditition(city):
+  url = "http://wttr.in/" + city + "?format=%C"
+  page = urlopen(url)
+  raw = page.read()
+  condition = raw.decode("utf-8")
+  return condition
+
+city = input("City: ")
+condition = "get_condition"
+if condition =='rain':
+  print("No umbrilla needed")
+
+else:
+  print("bring umbrilla")
+
