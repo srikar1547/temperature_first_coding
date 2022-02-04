@@ -33,4 +33,17 @@ if condition =='rain':
 
 else:
   print("bring umbrilla")
+  
+  # password T/F
+  
+  def check(passward):
+  has_number = False
+  for i in passward:
+    if i.isdigit():
+      has_number=True
+  return has_number
+
+password = input("Password: ")
+has_number = check(password)
+print(has_number)
 
